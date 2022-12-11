@@ -10,8 +10,8 @@ function App() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.currentTarget;
-    console.log("name", name);
-    console.log("value", value);
+    // console.log("name", name);
+    // console.log("value", value);
     setValue((prev) => {
       return {
         ...prev,
@@ -23,6 +23,10 @@ function App() {
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(values);
+    setValue({
+      firstName: "",
+      lastName: "",
+    });
   };
   return (
     <div className="App">
