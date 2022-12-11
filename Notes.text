@@ -1,0 +1,22 @@
+import { TweenMax, Power3 } from "gsap";
+import { useRef, useEffect } from "react";
+
+// const inputRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  // const inputRef = useRef<number | any>(null);
+
+  // let logoIcon = useRef<any>(null) as React.MutableRefObject<HTMLInputElement>;
+  let logoIcon = useRef() as React.MutableRefObject<HTMLInputElement>;
+  console.log(logoIcon);
+  useEffect(() => {
+    console.log(logoIcon);
+  });
+
+{/* <input type="text" name="number" id="number" ref={inputRef} />
+      <button onClick={handleClick}>Click</button> */}
+      <img
+        src={Logo}
+        alt="Logo"
+        ref={(element) => {
+          logoIcon = element;
+        }}
+      />
