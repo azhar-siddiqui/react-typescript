@@ -19,11 +19,16 @@ interface ButtonProps {
   btnText: string;
   //   onClick?: () => void;
   onClick?(event: React.MouseEvent<HTMLButtonElement>): void;
+  type?: any;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const { btnText, onClick } = props;
-  return <button onClick={onClick}>{btnText}</button>;
+  const { btnText, onClick, type } = props;
+  return (
+    <button onClick={onClick} type={type}>
+      {btnText}
+    </button>
+  );
 };
 
 export default Button;
